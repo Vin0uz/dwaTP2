@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class FirstController {
 	@Inject
-	VegetableRep rep;
+	VegetableRepository rep;
 	
 	@RequestMapping(value="/") 
 	String Mapping(Model m)
@@ -23,7 +23,7 @@ public class FirstController {
 	
 	@RequestMapping(value="/addvegetable",method=RequestMethod.POST)
 	String TotoVegetable(Vegetable veg){
-		rep.add(veg);
+		rep.save(veg);
 		return ("redirect:/");
 	}
 	
