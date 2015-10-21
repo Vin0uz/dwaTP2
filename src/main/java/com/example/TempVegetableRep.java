@@ -31,7 +31,7 @@ public class TempVegetableRep implements VegetableRep {
 	}
 
 	
-	public ArrayList<Vegetable> findAll(TempVegetableRep temp) {
+	public ArrayList<Vegetable> findAll() {
 		return this.getArrayVeg() ;
 	}
 

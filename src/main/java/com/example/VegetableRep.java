@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public interface VegetableRep {
 
-	ArrayList<Vegetable> findAll(TempVegetableRep temp);
+	ArrayList<Vegetable> findAll();
 	
 	void add(Vegetable veg);
 }

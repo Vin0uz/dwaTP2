@@ -8,6 +8,19 @@
   	<p th:text="${hi}" >
   		Saaluuuuuut 
   	</p>	
+<p th:each="v : ${veges}" th:text="${v.name}"  >
+</p>
+   <table border="1">
+   <tr> <td> Name </td> <td> Color </td> <td> Price </td> </tr>
+	<tr th:each="v : ${veges}" th:attr="style='background:' + ${v.color}  "> <td th:text="${v.name}"> </td> <td th:text="${v.color}"> </td> <td th:text="${v.price}"> </td> </tr>
+	
+   </table>
+   
+   <form method="post" th:action="@{/addvegetable}" th:object="${veg}">
+   	<input type="text" th:field="*{name}" />
+   	<input type="text" th:field="*{color}" />
+   	<input type="submit"/>
+   </form>
   </body>
  </html>
   
